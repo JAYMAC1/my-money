@@ -5,7 +5,6 @@ import styles from './Navbar.module.css'
 import { Link } from 'react-router-dom'
 
 // app components/pages
-import Home from '../pages/home/Home'
 
 const Navbar = () => {
   return (
