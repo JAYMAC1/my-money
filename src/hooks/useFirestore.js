@@ -10,6 +10,8 @@ let initialState = {
 
 const firestoreReducer = (state, action) => {
   switch (action.type) {
+    case 'IS_PENDING':
+      return { ...state, isPending: true }
     default:
       return state
   }
@@ -22,7 +24,9 @@ export const useFirestore = (collection) => {
   const ref = projectFirestore.collection(collection)
 
   // add doc
-  const addDocument = (doc) => {}
+  const addDocument = (doc) => {
+    dispatch({ type: 'IS_PENDING' })
+  }
 
   // delete doc
   const deleteDocument = (id) => {}
